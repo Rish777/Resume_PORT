@@ -76,7 +76,7 @@ const ContactSection: React.FC = () => {
                     href="mailto:contact@example.com" 
                     className="text-text-secondary hover:text-primary-400 transition-colors"
                   >
-                    contact@example.com
+                    corp.mail.rishabh@gmail.com
                   </a>
                 </div>
               </div>
@@ -87,7 +87,7 @@ const ContactSection: React.FC = () => {
                 </div>
                 <div>
                   <h4 className="text-lg font-medium">Location</h4>
-                  <p className="text-text-secondary">San Francisco, CA</p>
+                  <p className="text-text-secondary">Hyderabad , India</p>
                 </div>
               </div>
               
@@ -97,7 +97,7 @@ const ContactSection: React.FC = () => {
                 </div>
                 <div>
                   <h4 className="text-lg font-medium">Phone</h4>
-                  <p className="text-text-secondary">(123) 456-7890</p>
+                  <p className="text-text-secondary">+91 7081708760</p>
                 </div>
               </div>
             </div>

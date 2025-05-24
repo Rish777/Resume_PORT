@@ -89,13 +89,13 @@ const ProjectsPage: React.FC = () => {
                   />
                   
                   <div className="absolute inset-0 bg-gradient-to-t from-background-primary/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-between p-4">
-                    <Link 
+                    {/* <Link 
                       to={`/projects/${project.id}`} 
                       className="text-primary-400 font-medium inline-flex items-center"
                     >
                       View Details
                       <ArrowRight size={16} className="ml-1" />
-                    </Link>
+                    </Link> */}
                     
                     <div className="flex space-x-3">
                       {project.githubUrl && (
@@ -106,7 +106,7 @@ const ProjectsPage: React.FC = () => {
                           className="text-text-primary hover:text-primary-400 transition-colors"
                           aria-label="View source on GitHub"
                         >
-                          <Github size={20} />
+                          {/* <Github size={20} /> */}
                         </a>
                       )}
                       
@@ -118,7 +118,7 @@ const ProjectsPage: React.FC = () => {
                           className="text-text-primary hover:text-primary-400 transition-colors"
                           aria-label="View live demo"
                         >
-                          <ExternalLink size={20} />
+                          {/* <ExternalLink size={20} /> */}
                         </a>
                       )}
                     </div>

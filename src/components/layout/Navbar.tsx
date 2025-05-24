@@ -30,6 +30,13 @@ const Navbar: React.FC = () => {
     setIsOpen(false);
   };
 
+  const handleDownload = () => {
+    const link = document.createElement('a');
+    link.href = '/Rishabh_Resume.pdf'; // Replace with your actual file path
+    link.download = 'Your_Resume.pdf'; // Optional: specify the default file name
+    link.click();
+  };
+
   const navLinks = [
     { name: 'Home', path: '/' },
     { name: 'Projects', path: '/projects' },
@@ -60,17 +67,34 @@ const Navbar: React.FC = () => {
               {link.name}
             </NavLink>
           ))}
-          <a 
-            href="#" 
+          <a
+              href="/Rishabh_Resume.pdf" // Replace with the actual path to your resume
+              download="Rishabh_Shukla_Resume.pdf" // Specify the desired filename
+              className="btn btn-primary flex items-center space-x-1"
+            >
+              <span>Resume</span>
+              <ArrowUpRight size={18} />
+            </a>
+                        {/* <button
+                  onClick={handleDownload}
+                  className="btn btn-primary flex items-center space-x-1"
+                >
+                  <span>Resume</span>
+                  <ArrowUpRight size={18} />
+                </button> */}
+          </div>
+          {/* <a 
+            href="/Rishabh_Resume.PDF" 
             className="btn btn-primary flex items-center space-x-1"
             onClick={(e) => e.preventDefault()}
           >
             <span>Resume</span>
             <ArrowUpRight size={18} />
           </a>
-        </div>
+        </div> */}
 
         {/* Mobile Navigation Button */}
+      
         <button 
           className="md:hidden text-text-primary p-2" 
           onClick={toggleMenu}

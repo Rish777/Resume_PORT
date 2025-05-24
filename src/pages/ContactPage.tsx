@@ -203,7 +203,7 @@ const ContactPage: React.FC = () => {
                     </div>
                     <div>
                       <h4 className="text-lg font-medium">Location</h4>
-                      <p className="text-text-secondary">San Francisco, CA</p>
+                      <p className="text-text-secondary">Hyderabad, India</p>
                       <p className="text-text-muted">Available for remote work worldwide</p>
                     </div>
                   </div>

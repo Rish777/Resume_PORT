@@ -2,7 +2,7 @@ import React from 'react';
 import HeroSection from '../components/home/HeroSection';
 import AboutSection from '../components/home/AboutSection';
 import SkillsSection from '../components/home/SkillsSection';
-import ProjectsSection from '../components/home/ProjectsSection';
+// import ProjectsSection from '../components/home/ProjectsSection';
 import VisualizationSection from '../components/home/VisualizationSection';
 // import CodeShowcase from '../components/home/CodeShowcase';
 import TestimonialsSection from '../components/home/TestimonialsSection';
@@ -14,7 +14,7 @@ const HomePage: React.FC = () => {
       <HeroSection />
       <AboutSection />
       <SkillsSection />
-      <ProjectsSection />
+      {/* <ProjectsSection /> */}
       <VisualizationSection />
       {/* <CodeShowcase /> */}
       <TestimonialsSection />
