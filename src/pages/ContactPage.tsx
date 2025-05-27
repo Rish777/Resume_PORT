@@ -1,15 +1,18 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { motion } from 'framer-motion';
-import { Mail, MapPin, Phone, Send, Linkedin, Github, Twitter } from 'lucide-react';
+import { Mail, MapPin, Phone, Send, Linkedin, Github, } from 'lucide-react';
+import emailjs from '@emailjs/browser';
 
 const ContactPage: React.FC = () => {
+  const formRef = useRef<HTMLFormElement>(null);
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     subject: '',
     message: ''
   });
-  
+
   const [formStatus, setFormStatus] = useState<null | 'success' | 'error'>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -18,26 +21,34 @@ const ContactPage: React.FC = () => {
     setFormData(prevData => ({ ...prevData, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false);
+    setFormStatus(null);
+
+    try {
+      await emailjs.sendForm(
+        'service_agls5wd', // ✅ Replace this
+        'template_whpspdb', // ✅ Replace this
+        formRef.current!,
+        '8HZ9Ov6k_HAi_Ooa3' // ✅ Replace this
+      );
+
       setFormStatus('success');
-      
-      // Reset form after successful submission
-      setFormData({
+    setFormData({
         name: '',
         email: '',
         subject: '',
         message: ''
       });
-      
-      // Reset status after 3 seconds
+
       setTimeout(() => setFormStatus(null), 3000);
-    }, 1500);
+    } catch (error) {
+      console.error("❌ Email send error:", error);
+      setFormStatus('error');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -57,7 +68,7 @@ const ContactPage: React.FC = () => {
               I'm always open to new challenges and collaborations.
             </p>
           </motion.div>
-          
+
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -67,8 +78,8 @@ const ContactPage: React.FC = () => {
             >
               <div className="bg-background-primary rounded-lg shadow-lg p-8">
                 <h2 className="text-2xl font-bold mb-6">Send a Message</h2>
-                
-                <form onSubmit={handleSubmit} className="space-y-6">
+
+                <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                       <label htmlFor="name" className="block text-text-secondary mb-2">Your Name</label>
@@ -83,7 +94,7 @@ const ContactPage: React.FC = () => {
                         placeholder="Enter your name"
                       />
                     </div>
-                    
+
                     <div>
                       <label htmlFor="email" className="block text-text-secondary mb-2">Your Email</label>
                       <input 
@@ -94,11 +105,11 @@ const ContactPage: React.FC = () => {
                         onChange={handleChange}
                         required
                         className="w-full bg-background-secondary border border-background-accent focus:border-primary-500 rounded-md py-3 px-4 text-text-primary focus:outline-none focus:ring-2 focus:ring-primary-500/50 transition"
-                        placeholder="john@example.com"
+                        placeholder="Enter your email"
                       />
                     </div>
                   </div>
-                  
+
                   <div>
                     <label htmlFor="subject" className="block text-text-secondary mb-2">Subject</label>
                     <input 
@@ -112,7 +123,7 @@ const ContactPage: React.FC = () => {
                       placeholder="Project Inquiry"
                     />
                   </div>
-                  
+
                   <div>
                     <label htmlFor="message" className="block text-text-secondary mb-2">Message</label>
                     <textarea 
@@ -126,7 +137,7 @@ const ContactPage: React.FC = () => {
                       placeholder="Your message here..."
                     ></textarea>
                   </div>
-                  
+
                   <motion.button 
                     type="submit"
                     className={`btn btn-primary w-full sm:w-auto px-8 py-3 flex items-center justify-center ${isSubmitting ? 'opacity-80' : ''}`}
@@ -149,7 +160,7 @@ const ContactPage: React.FC = () => {
                       </>
                     )}
                   </motion.button>
-                  
+
                   {formStatus === 'success' && (
                     <motion.div 
                       initial={{ opacity: 0, y: 10 }}
@@ -159,7 +170,7 @@ const ContactPage: React.FC = () => {
                       Thank you for your message! I'll get back to you as soon as possible.
                     </motion.div>
                   )}
-                  
+
                   {formStatus === 'error' && (
                     <motion.div 
                       initial={{ opacity: 0, y: 10 }}
@@ -172,7 +183,7 @@ const ContactPage: React.FC = () => {
                 </form>
               </div>
             </motion.div>
-            
+
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -180,7 +191,7 @@ const ContactPage: React.FC = () => {
             >
               <div className="bg-background-primary rounded-lg shadow-lg p-8">
                 <h2 className="text-2xl font-bold mb-6">Contact Information</h2>
-                
+
                 <div className="space-y-6">
                   <div className="flex items-start">
                     <div className="bg-background-accent p-3 rounded-lg text-primary-500 mr-4">
@@ -189,14 +200,14 @@ const ContactPage: React.FC = () => {
                     <div>
                       <h4 className="text-lg font-medium">Email</h4>
                       <a 
-                        href="mailto:contact@example.com" 
+                        href="corp.mail.rishabh@gmail.com" 
                         className="text-text-secondary hover:text-primary-400 transition-colors"
                       >
-                        contact@example.com
+                        corp.mail.rishabh@gmail.com
                       </a>
                     </div>
                   </div>
-                  
+
                   <div className="flex items-start">
                     <div className="bg-background-accent p-3 rounded-lg text-primary-500 mr-4">
                       <MapPin size={20} />
@@ -207,24 +218,24 @@ const ContactPage: React.FC = () => {
                       <p className="text-text-muted">Available for remote work worldwide</p>
                     </div>
                   </div>
-                  
+
                   <div className="flex items-start">
                     <div className="bg-background-accent p-3 rounded-lg text-primary-500 mr-4">
                       <Phone size={20} />
                     </div>
                     <div>
                       <h4 className="text-lg font-medium">Phone</h4>
-                      <p className="text-text-secondary">(123) 456-7890</p>
-                      <p className="text-text-muted">Monday-Friday, 9am-5pm PST</p>
+                      <p className="text-text-secondary">+91 7081708760</p>
+                      {/* <p className="text-text-muted">Monday-Friday, 9am-5pm PST</p> */}
                     </div>
                   </div>
                 </div>
-                
+
                 <div className="mt-8 pt-6 border-t border-background-accent">
                   <h4 className="text-lg font-medium mb-4">Connect With Me</h4>
                   <div className="flex space-x-4">
                     <a 
-                      href="https://linkedin.com/" 
+                      href="https://www.linkedin.com/in/rishabh-shukla-69a511aa/" 
                       target="_blank" 
                       rel="noopener noreferrer"
                       className="bg-background-accent hover:bg-primary-500 text-text-primary w-12 h-12 rounded-full flex items-center justify-center transition-colors"
@@ -233,7 +244,7 @@ const ContactPage: React.FC = () => {
                       <Linkedin size={20} />
                     </a>
                     <a 
-                      href="https://github.com/" 
+                      href="https://github.com/Rish777/" 
                       target="_blank" 
                       rel="noopener noreferrer"
                       className="bg-background-accent hover:bg-primary-500 text-text-primary w-12 h-12 rounded-full flex items-center justify-center transition-colors"
@@ -241,19 +252,19 @@ const ContactPage: React.FC = () => {
                     >
                       <Github size={20} />
                     </a>
-                    <a 
+                    {/* <a 
                       href="https://twitter.com/" 
                       target="_blank" 
                       rel="noopener noreferrer"
                       className="bg-background-accent hover:bg-primary-500 text-text-primary w-12 h-12 rounded-full flex items-center justify-center transition-colors"
-                      aria-label="Twitter"
+                      aria-label="Naukri"
                     >
                       <Twitter size={20} />
-                    </a>
+                    </a> */}
                   </div>
                 </div>
               </div>
-              
+
               <motion.div 
                 className="bg-primary-600 mt-6 p-6 rounded-lg shadow-lg"
                 initial={{ opacity: 0, scale: 0.95 }}
@@ -265,9 +276,9 @@ const ContactPage: React.FC = () => {
                   I'm currently available for freelance projects, consulting work, and full-time positions.
                 </p>
                 <a 
-                  href="/files/resume.pdf" 
+                  href="/Rishabh_Resume.pdf" 
                   className="inline-flex items-center bg-white text-primary-700 px-4 py-2 rounded-md font-medium hover:bg-primary-50 transition-colors"
-                  onClick={(e) => e.preventDefault()}
+                  // onClick={(e) => e.preventDefault()}
                 >
                   Download Resume
                 </a>

@@ -3,8 +3,9 @@ import { motion } from 'framer-motion';
 import { Briefcase as BriefcaseBusiness, Award, GraduationCap, ArrowDown } from 'lucide-react';
 
 interface Experience {
+  project?: string;
   title: string;
-  company: string;
+  // company: string;
   location: string;
   period: string;
   description: string[];
@@ -28,90 +29,101 @@ interface Certification {
 
 const experiences: Experience[] = [
   {
-    title: "Senior ETL Engineer",
-    company: "DataCorp Solutions",
-    location: "San Francisco, CA",
+    project:"Project: Health OS (HOS)",
+    title: "Software Engineer | Carelon Global Solutions",
+    // company: "Carelon Global Solutions",
+    location: "Hyderabad, India",
     period: "2020 - Present",
     description: [
-      "Lead a team of 5 data engineers in designing and implementing ETL pipelines for enterprise clients",
-      "Architected and delivered a cloud data warehouse migration, reducing costs by 40% and query times by 65%",
-      "Implemented real-time data integration pipelines processing over 5TB of data daily",
-      "Spearheaded the adoption of data quality frameworks, reducing data errors by 85%"
+      "Lead a team of 3 data engineers in designing and implementing ETL pipelines for enterprise clients",
+      "Designed and implemented automated business report generation using AWS Lambda, aligning with key business requirements",
+      "Developed SQL scripts leveraging Snowflake for complex data transformations",
+      "Designed and executed unit test cases, maintained technical documentation for code and process flows",
+      "Maintained metadata entries in the AEDL dashboard to support Snowflake data loads orchestrated through AWS pipelines",
+      "Developed and sustained AWS Glue jobs for automated and scalable ETL processes",
+      "Developed AWS Lambda functions to process external files from S3"
     ],
-    technologies: ["Snowflake", "AWS", "Apache Airflow", "Python", "dbt", "Kafka"]
+    technologies: ["Snowflake", "AWS", "Python"]
   },
   {
-    title: "Data Engineer",
-    company: "FinTech Innovations",
-    location: "New York, NY",
-    period: "2017 - 2020",
+    project:"Project: Cloud Migration | Teradata → Snowflake | AWS",
+    title: "Software Engineer | Carelon Global Solutions",
+    // company: "FinTech Innovations",
+    location: "Hyderabad, India",
+    period: "2020 - Present",
     description: [
-      "Developed robust ETL processes for financial data, ensuring regulatory compliance",
-      "Built data pipelines to integrate 12 disparate source systems into a unified data warehouse",
-      "Created automated data validation and reconciliation tools, saving 30+ hours weekly",
-      "Improved ETL process performance by 50% through optimization and parallelization"
+      "Led data migration from on-premises systems (Teradata, BTEQ, Informatica) to cloud infrastructure (Snowflake, SnowSQL, AWS), ensuring zero data loss.",
+      "Utilized the internal AEDL portal (powered by AWS RDS) to securely transfer on-premises tables to Snowflake.",
+      "Re-engineered BTEQ scripts into optimized Snowflake SQL scripts for incremental data loading with performance enhancements and efficient resource usage.",
+      "Replaced Informatica with a serverless architecture using AWS Lambda and S3 to process external file data directly into Snowflake.",
+      "Replaced Control-M job scheduler with the AEDL internal scheduler, leveraging AWS Step Functions and AWS Lambda for load orchestration.",
+      "Built custom automation tools in Python to accelerate the migration process, reduce manual effort, and ensure high degree of accuracy and reliability.",
+      "Contributed to the design and maintenance of robust, scalable cloud pipelines, reducing data latency and operational overhead."
     ],
-    technologies: ["Azure", "SQL Server", "SSIS", "Python", "C#", "PowerBI"]
+    technologies: ["AWS", "SQL Server", "Snowflake", "Python", "Teradata", "Control M", "Informatica", "BTEQ"]
   },
   {
-    title: "Database Developer",
-    company: "TechStart Inc.",
-    location: "Chicago, IL",
-    period: "2015 - 2017",
+    project:"Project: Medicare Revenue Data Mart (MRDM)",
+    title: "Associate Software Engineer | Carelon Global Solutions",
+    // company: "FinTech Innovations",
+    location: "Hyderabad, India",
+    period: "2020 - Present",
     description: [
-      "Designed and optimized database schemas for performance and scalability",
-      "Developed stored procedures and ETL scripts for data processing workflows",
-      "Collaborated with data analysts to translate business requirements into technical solutions",
-      "Implemented data archiving and purging strategies, improving system performance by 35%"
+      "Analyzed technical specifications and translated business requirements into efficient data processing solutions.",
+      "Developed and optimized BTEQ scripts leveraging Teradata for complex data transformations.",
+      "Designed and executed unit test cases, maintained technical documentation for code and process flows.",
+      "Configured and scheduled batch workflows using Control-M (CTM) for end-to-end job orchestration.",
+      "Developed Python-based automation tools to streamline process flows and minimize manual intervention.",
+      "Created and maintained the Source-to-Target Data Mapping document, including detailed documentation of all entities, attributes, data relationships, primary and foreign key structures, allowed values, codes, business rules, glossary terms, and more."
     ],
-    technologies: ["PostgreSQL", "Oracle", "T-SQL", "PL/SQL", "Python"]
+    technologies: ["Teradata", "Control M", "Informatica", "BTEQ", "Python"]
   }
 ];
 
 const education: Education[] = [
   {
-    degree: "Master of Science in Computer Science",
-    institution: "Stanford University",
-    location: "Stanford, CA",
-    year: "2015",
-    description: "Specialized in Data Science and Distributed Systems"
+    degree: "Bachelors of Science",
+    institution: "AKTU University",
+    location: "Uttar Pradesh, India",
+    year: "2019",
+    description: "Computer Science and Engineering."
   },
   {
-    degree: "Bachelor of Science in Computer Engineering",
-    institution: "University of Michigan",
-    location: "Ann Arbor, MI",
-    year: "2013",
-    description: "Minor in Mathematics. Graduated with Honors."
+    degree: "Intermediate",
+    institution: "State Board",
+    location: "Uttar Pradesh, India",
+    year: "2014",
+    description: ""
   }
 ];
 
-const certifications: Certification[] = [
-  {
-    name: "AWS Certified Data Analytics - Specialty",
-    issuer: "Amazon Web Services",
-    date: "2022"
-  },
-  {
-    name: "Microsoft Certified: Azure Data Engineer Associate",
-    issuer: "Microsoft",
-    date: "2021"
-  },
-  {
-    name: "Snowflake SnowPro Core Certification",
-    issuer: "Snowflake",
-    date: "2020"
-  },
-  {
-    name: "Google Professional Data Engineer",
-    issuer: "Google Cloud",
-    date: "2019"
-  },
-  {
-    name: "Databricks Certified Developer - Apache Spark",
-    issuer: "Databricks",
-    date: "2018"
-  }
-];
+// const certifications: Certification[] = [
+//   {
+//     name: "AWS Certified Data Analytics - Specialty",
+//     issuer: "Amazon Web Services",
+//     date: "2022"
+//   },
+//   {
+//     name: "Microsoft Certified: Azure Data Engineer Associate",
+//     issuer: "Microsoft",
+//     date: "2021"
+//   },
+//   {
+//     name: "Snowflake SnowPro Core Certification",
+//     issuer: "Snowflake",
+//     date: "2020"
+//   },
+//   {
+//     name: "Google Professional Data Engineer",
+//     issuer: "Google Cloud",
+//     date: "2019"
+//   },
+//   {
+//     name: "Databricks Certified Developer - Apache Spark",
+//     issuer: "Databricks",
+//     date: "2018"
+//   }
+// ];
 
 const ExperiencePage: React.FC = () => {
   return (
@@ -164,9 +176,12 @@ const ExperiencePage: React.FC = () => {
                   
                   <div className="bg-background-primary p-6 rounded-lg shadow-md">
                     <div className="flex flex-col md:flex-row md:items-start justify-between mb-4">
-                      <div>
-                        <h3 className="text-xl font-semibold text-primary-400">{exp.title}</h3>
-                        <h4 className="text-lg font-medium">{exp.company}</h4>
+                    <div>
+                        <h2 className="text-2xl font-bold text-white bg-gray-700 px-4 py-2 rounded-lg shadow-md inline-block">
+                          {exp.project}
+                        </h2>
+                        <h3 className="text-xl font-semibold text-primary-400 mt-2">{exp.title}</h3>
+                        {/* <h4 className="text-lg font-medium">{exp.company}</h4> */}
                         <p className="text-text-muted">{exp.location}</p>
                       </div>
                       <p className="text-text-muted mt-1 md:mt-0 md:ml-4 bg-background-accent px-3 py-1 rounded-full inline-flex md:self-start">
@@ -226,7 +241,7 @@ const ExperiencePage: React.FC = () => {
             </motion.div>
             
             {/* Certifications */}
-            <motion.div
+            {/* <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.7 }}
@@ -252,7 +267,7 @@ const ExperiencePage: React.FC = () => {
                   </div>
                 ))}
               </div>
-            </motion.div>
+            </motion.div> */}
           </div>
         </div>
       </div>

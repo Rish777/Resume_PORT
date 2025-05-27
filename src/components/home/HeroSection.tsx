@@ -33,14 +33,14 @@ const HeroSection: React.FC = () => {
  expertise in healthcare.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
-            <motion.a 
+            {/* <motion.a 
               href="#projects" 
               className="btn btn-primary text-center"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
               View My Projects
-            </motion.a>
+            </motion.a> */}
             <motion.a 
               href="#contact" 
               className="btn btn-outline text-center"

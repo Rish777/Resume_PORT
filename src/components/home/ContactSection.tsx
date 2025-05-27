@@ -1,13 +1,16 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { Mail, MapPin, Phone, Send } from 'lucide-react';
+import emailjs from '@emailjs/browser';
 
 const ContactSection: React.FC = () => {
   const { ref, inView } = useInView({
     threshold: 0.1,
     triggerOnce: true
   });
+
+  const formRef = useRef<HTMLFormElement>(null);
 
   const [formData, setFormData] = useState({
     name: '',
@@ -23,22 +26,42 @@ const ContactSection: React.FC = () => {
     setFormData(prevData => ({ ...prevData, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Simulate form submission
-    setTimeout(() => {
+    console.log("Form submitted");
+    // setFormStatus(null);
+
+    if (!formRef.current) {
+      console.error("formRef is null");
+      return;
+    }
+
+    console.log("Sending form via EmailJS");
+
+
+    try {
+      console.log("Form ref:", formRef.current);
+      const result = await emailjs.sendForm(
+        'service_agls5wd', // ✅ Replace this
+        'template_whpspdb', // ✅ Replace this
+        formRef.current!,
+        '8HZ9Ov6k_HAi_Ooa3' // ✅ Replace this
+      );
+      
+      console.log("✅ Email sent:", result.text);
       setFormStatus('success');
-      // Reset form after successful submission
-      setFormData({
+    setFormData({
         name: '',
         email: '',
         subject: '',
         message: ''
       });
-      
-      // Reset status after 3 seconds
+
       setTimeout(() => setFormStatus(null), 3000);
-    }, 1000);
+    } catch (error) {
+      console.error('Email send error:', error);
+      setFormStatus('error');
+    }
   };
 
   return (
@@ -149,7 +172,7 @@ const ContactSection: React.FC = () => {
             animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: 30 }}
             transition={{ duration: 0.5, delay: 0.4 }}
           >
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label htmlFor="name" className="block text-text-secondary mb-1">Name</label>
                 <input 

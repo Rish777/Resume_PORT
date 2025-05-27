@@ -6,6 +6,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isResumeOpen, setIsResumeOpen] = useState(false);
+
 
   useEffect(() => {
     const handleScroll = () => {
@@ -75,23 +77,8 @@ const Navbar: React.FC = () => {
               <span>Resume</span>
               <ArrowUpRight size={18} />
             </a>
-                        {/* <button
-                  onClick={handleDownload}
-                  className="btn btn-primary flex items-center space-x-1"
-                >
-                  <span>Resume</span>
-                  <ArrowUpRight size={18} />
-                </button> */}
-          </div>
-          {/* <a 
-            href="/Rishabh_Resume.PDF" 
-            className="btn btn-primary flex items-center space-x-1"
-            onClick={(e) => e.preventDefault()}
-          >
-            <span>Resume</span>
-            <ArrowUpRight size={18} />
-          </a>
-        </div> */}
+            </div>
+          
 
         {/* Mobile Navigation Button */}
       
@@ -127,13 +114,14 @@ const Navbar: React.FC = () => {
                   {link.name}
                 </NavLink>
               ))}
-              <a 
-                href="#" 
-                className="btn btn-primary w-full text-center text-lg mt-4"
-                onClick={(e) => e.preventDefault()}
-              >
-                Resume
-              </a>
+              <a
+              href="/Rishabh_Resume.pdf" // Replace with the actual path to your resume
+              download="Rishabh_Shukla_Resume.pdf" // Specify the desired filename
+              className="btn btn-primary flex items-center space-x-1"
+            >
+              <span>Resume</span>
+              <ArrowUpRight size={18} />
+            </a>
             </div>
           </motion.div>
         )}
