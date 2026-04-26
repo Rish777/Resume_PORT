@@ -14,7 +14,7 @@ export const testimonialsData: Testimonial[] = [
     position: "Senior Data Architect",
     company: "TechCorp Inc.",
     quote: "I would like to endorse Rishabh for his outstanding work and contributions to our team. His dedication and commitment have been evident through his flawless project delivery and the development of tools that have significantly enhanced our team's adaptability.",
-    avatar: "https://media.licdn.com/dms/image/v2/D5603AQEYDYFyqXWxQg/profile-displayphoto-scale_400_400/B56Zrzc0KeH8Ag-/0/1765021010618?e=1768435200&v=beta&t=wVUgO3zb4ZseE4ky7PipE7UgIlY8OQPOAk9fPxwhqsc"
+    avatar: "https://media.licdn.com/dms/image/v2/D5603AQEYDYFyqXWxQg/profile-displayphoto-crop_800_800/B56Zrzc0KeH8AI-/0/1765021010528?e=1778716800&v=beta&t=Jyo3EZI9HRz7rFvUH8gEx_wCq3WV_I4nq4FiiTujniE"
   },
   // {
   //   id: 2,
