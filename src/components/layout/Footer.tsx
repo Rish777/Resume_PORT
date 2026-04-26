@@ -20,13 +20,13 @@ const Footer: React.FC = () => {
               Transforming raw data into valuable insights through efficient ETL pipelines and data engineering solutions.
             </p>
             <div className="flex space-x-4">
-              <a href="https://github.com/" target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-primary-500 transition-colors" aria-label="GitHub">
+              <a href="https://github.com/Rish777" target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-primary-500 transition-colors" aria-label="GitHub">
                 <Github size={20} />
               </a>
-              <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-primary-500 transition-colors" aria-label="LinkedIn">
+              <a href="https://linkedin.com/in/rishabhshukla" target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-primary-500 transition-colors" aria-label="LinkedIn">
                 <Linkedin size={20} />
               </a>
-              <a href="mailto:contact@example.com" className="text-text-secondary hover:text-primary-500 transition-colors" aria-label="Email">
+              <a href="mailto:corp.mail.rishabh@gmail.com" className="text-text-secondary hover:text-primary-500 transition-colors" aria-label="Email">
                 <Mail size={20} />
               </a>
             </div>

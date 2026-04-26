@@ -35,11 +35,20 @@ const HeroSection: React.FC = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
             <motion.a 
               href="#contact" 
-              className="btn btn-outline text-center"
+              className="btn btn-primary text-center"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
               Get In Touch
+            </motion.a>
+            <motion.a 
+              href="/Resume_PORT/Rishabh_Resume.pdf" 
+              download="Rishabh_Shukla_Resume.pdf"
+              className="btn btn-outline text-center flex items-center justify-center gap-2"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <span>Download Resume</span>
             </motion.a>
           </div>
         </motion.div>

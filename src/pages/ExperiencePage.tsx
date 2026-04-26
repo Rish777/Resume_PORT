@@ -97,33 +97,33 @@ const education: Education[] = [
   }
 ];
 
-// const certifications: Certification[] = [
-//   {
-//     name: "AWS Certified Data Analytics - Specialty",
-//     issuer: "Amazon Web Services",
-//     date: "2022"
-//   },
-//   {
-//     name: "Microsoft Certified: Azure Data Engineer Associate",
-//     issuer: "Microsoft",
-//     date: "2021"
-//   },
-//   {
-//     name: "Snowflake SnowPro Core Certification",
-//     issuer: "Snowflake",
-//     date: "2020"
-//   },
-//   {
-//     name: "Google Professional Data Engineer",
-//     issuer: "Google Cloud",
-//     date: "2019"
-//   },
-//   {
-//     name: "Databricks Certified Developer - Apache Spark",
-//     issuer: "Databricks",
-//     date: "2018"
-//   }
-// ];
+const certifications: Certification[] = [
+  {
+    name: "AWS Certified Data Analytics - Specialty",
+    issuer: "Amazon Web Services",
+    date: "2022"
+  },
+  {
+    name: "Microsoft Certified: Azure Data Engineer Associate",
+    issuer: "Microsoft",
+    date: "2021"
+  },
+  {
+    name: "Snowflake SnowPro Core Certification",
+    issuer: "Snowflake",
+    date: "2020"
+  },
+  {
+    name: "Google Professional Data Engineer",
+    issuer: "Google Cloud",
+    date: "2019"
+  },
+  {
+    name: "Databricks Certified Developer - Apache Spark",
+    issuer: "Databricks",
+    date: "2018"
+  }
+];
 
 const ExperiencePage: React.FC = () => {
   return (
@@ -241,7 +241,7 @@ const ExperiencePage: React.FC = () => {
             </motion.div>
             
             {/* Certifications */}
-            {/* <motion.div
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.7 }}
@@ -267,7 +267,7 @@ const ExperiencePage: React.FC = () => {
                   </div>
                 ))}
               </div>
-            </motion.div> */}
+            </motion.div>
           </div>
         </div>
       </div>

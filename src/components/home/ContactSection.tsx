@@ -96,7 +96,7 @@ const ContactSection: React.FC = () => {
                 <div>
                   <h4 className="text-lg font-medium">Email</h4>
                   <a 
-                    href="mailto:contact@example.com" 
+                    href="mailto:corp.mail.rishabh@gmail.com" 
                     className="text-text-secondary hover:text-primary-400 transition-colors"
                   >
                     corp.mail.rishabh@gmail.com
@@ -129,7 +129,7 @@ const ContactSection: React.FC = () => {
               <h4 className="text-lg font-medium mb-4">Follow Me</h4>
               <div className="flex space-x-4">
                 <a 
-                  href="https://linkedin.com/" 
+                  href="https://linkedin.com/in/rishabhshukla" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="bg-background-accent hover:bg-primary-600 text-text-primary w-10 h-10 rounded-full flex items-center justify-center transition-colors"
@@ -142,7 +142,7 @@ const ContactSection: React.FC = () => {
                   </svg>
                 </a>
                 <a 
-                  href="https://github.com/" 
+                  href="https://github.com/Rish777" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="bg-background-accent hover:bg-primary-600 text-text-primary w-10 h-10 rounded-full flex items-center justify-center transition-colors"

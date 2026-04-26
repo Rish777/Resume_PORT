@@ -65,7 +65,7 @@ const Navbar: React.FC = () => {
               </NavLink>
             ))}
             <a
-              href="/Rishabh_Resume.pdf"
+              href="/Resume_PORT/Rishabh_Resume.pdf"
               download="Rishabh_Shukla_Resume.pdf"
               className="btn btn-primary flex items-center space-x-1"
             >
@@ -114,7 +114,7 @@ const Navbar: React.FC = () => {
                   </NavLink>
                 ))}
                 <a
-                  href="/Rishabh_Resume.pdf"
+                  href="/Resume_PORT/Rishabh_Resume.pdf"
                   download="Rishabh_Shukla_Resume.pdf"
                   className="btn btn-primary flex items-center justify-center space-x-2 mt-4"
                   onClick={closeMenu}
