@@ -52,9 +52,9 @@ const HeroSection: React.FC = () => {
         >
           <div className="relative w-48 h-48 sm:w-56 sm:h-56 md:w-72 md:h-72 lg:w-96 lg:h-96 rounded-full overflow-hidden border-4 border-primary-500 shadow-[0_0_30px_rgba(var(--color-primary-500),0.3)] md:shadow-[0_0_40px_rgba(var(--color-primary-500),0.3)] group z-20 bg-background-secondary mt-8 md:mt-0">
             <img 
-              src="https://media.licdn.com/dms/image/v2/D5603AQEYDYFyqXWxQg/profile-displayphoto-scale_400_400/B56Zrzc0KeH8Ag-/0/1765021010618?e=1768435200&v=beta&t=wVUgO3zb4ZseE4ky7PipE7UgIlY8OQPOAk9fPxwhqsc" 
+              src="/Resume_PORT/profile.jpg" 
               alt="Rishabh Shukla" 
-              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+              className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-110"
             />
             <div className="absolute inset-0 rounded-full shadow-[inset_0_0_15px_rgba(0,0,0,0.5)] md:shadow-[inset_0_0_20px_rgba(0,0,0,0.5)] pointer-events-none"></div>
           </div>
