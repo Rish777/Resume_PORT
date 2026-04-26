@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useRef } from 'react';
 import { motion } from 'framer-motion';
 import { ChevronDown } from 'lucide-react';
 import ParticlesBackground from './ParticlesBackground';
@@ -11,36 +11,28 @@ const HeroSection: React.FC = () => {
   };
 
   return (
-    <section className="relative h-screen flex items-center overflow-hidden animated-gradient">
+    <section className="relative min-h-screen md:h-screen flex items-center overflow-hidden animated-gradient py-20 md:py-0">
       {/* Particles background */}
       <ParticlesBackground />
       
-      <div className="container-custom relative z-10">
+      <div className="container-custom relative z-10 flex flex-col-reverse md:flex-row items-center justify-between gap-8 md:gap-12 pt-10 md:pt-0">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, x: -50 }}
+          animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
-          className="max-w-3xl"
+          className="max-w-2xl md:w-1/2 lg:w-3/5 text-center md:text-left"
         >
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-4">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4">
             <span className="text-text-primary">Rishabh Shukla</span>
           </h1>
-          <div className="h-1 w-24 bg-primary-500 mb-6"></div>
-          <h2 className="text-3xl md:text-4xl mb-6 text-primary-400 font-medium">Data Engineer</h2>
-          <p className="text-xl text-text-secondary mb-8 leading-relaxed">
+          <div className="h-1 w-20 md:w-24 bg-primary-500 mb-6 mx-auto md:mx-0"></div>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl mb-6 text-primary-400 font-medium">Data Engineer</h2>
+          <p className="text-lg sm:text-xl text-text-secondary mb-8 leading-relaxed">
           A seasoned Senior Software Engineer with 5 years of experience in Teradata, Snowflake, SQL, and AWS, specializing in data integration,
  performance tuning, and production support. Skilled in handling complex data from diverse sources with domain
  expertise in healthcare.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4">
-            {/* <motion.a 
-              href="#projects" 
-              className="btn btn-primary text-center"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              View My Projects
-            </motion.a> */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
             <motion.a 
               href="#contact" 
               className="btn btn-outline text-center"
@@ -49,6 +41,22 @@ const HeroSection: React.FC = () => {
             >
               Get In Touch
             </motion.a>
+          </div>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8, x: 50 }}
+          animate={{ opacity: 1, scale: 1, x: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="md:w-1/2 lg:w-2/5 flex justify-center mb-4 md:mb-0"
+        >
+          <div className="relative w-48 h-48 sm:w-56 sm:h-56 md:w-72 md:h-72 lg:w-96 lg:h-96 rounded-full overflow-hidden border-4 border-primary-500 shadow-[0_0_30px_rgba(var(--color-primary-500),0.3)] md:shadow-[0_0_40px_rgba(var(--color-primary-500),0.3)] group z-20 bg-background-secondary mt-8 md:mt-0">
+            <img 
+              src="https://media.licdn.com/dms/image/v2/D5603AQEYDYFyqXWxQg/profile-displayphoto-scale_400_400/B56Zrzc0KeH8Ag-/0/1765021010618?e=1768435200&v=beta&t=wVUgO3zb4ZseE4ky7PipE7UgIlY8OQPOAk9fPxwhqsc" 
+              alt="Rishabh Shukla" 
+              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+            />
+            <div className="absolute inset-0 rounded-full shadow-[inset_0_0_15px_rgba(0,0,0,0.5)] md:shadow-[inset_0_0_20px_rgba(0,0,0,0.5)] pointer-events-none"></div>
           </div>
         </motion.div>
       </div>
