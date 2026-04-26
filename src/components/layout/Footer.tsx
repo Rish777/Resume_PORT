@@ -13,7 +13,7 @@ const Footer: React.FC = () => {
             <div className="flex items-center space-x-2 mb-4">
               <Database size={24} className="text-primary-500" />
               <span className="text-xl font-semibold">
-                <span className="text-primary-500">ETL</span> Engineer
+                <span className="text-primary-500">Data</span> Engineer
               </span>
             </div>
             <p className="text-text-secondary mb-6">
@@ -61,7 +61,7 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Technical Skills</h3>
             <div className="flex flex-wrap gap-2">
-              {['Python', 'SQL', 'Apache Airflow', 'DBT', 'AWS', 'Azure', 'Snowflake', 'Spark'].map((skill) => (
+              {['Python', 'SQL', 'Teradata', 'DBT', 'AWS', 'Informatica', 'Snowflake', 'Control-M','Shell-Scripting','Version-Control','API'].map((skill) => (
                 <span 
                   key={skill}
                   className="bg-background-accent px-3 py-1 text-sm rounded-full text-text-secondary"
@@ -74,7 +74,7 @@ const Footer: React.FC = () => {
         </div>
         
         <div className="pt-8 border-t border-background-accent text-center text-text-muted">
-          <p>&copy; {currentYear} ETL Engineer Portfolio. All rights reserved.</p>
+          <p>&copy; {currentYear} Data Engineer Portfolio. All rights reserved.</p>
         </div>
       </div>
     </footer>

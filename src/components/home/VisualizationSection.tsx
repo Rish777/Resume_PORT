@@ -35,7 +35,7 @@ const VisualizationSection: React.FC = () => {
       { x: canvas.width * 0.3, y: canvas.height / 2, radius: 40, color: '#60A5FA', text: 'Extract' },
       { x: canvas.width * 0.5, y: canvas.height / 2, radius: 40, color: '#14B8A6', text: 'Transform' },
       { x: canvas.width * 0.7, y: canvas.height / 2, radius: 40, color: '#10B981', text: 'Load' },
-      { x: canvas.width * 0.9, y: canvas.height / 2, radius: 30, color: '#F8FAFC', text: 'Target' }
+      { x: canvas.width * 0.9, y: canvas.height / 2, radius: 30, color: '#ef920fff', text: 'Target' }
     ];
     
     // Data particles

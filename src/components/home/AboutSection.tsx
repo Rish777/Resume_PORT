@@ -59,9 +59,9 @@ const AboutSection: React.FC = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
           >
             <p className="text-text-secondary mb-4">
-              I'm a passionate ETL Engineer with over 8 years of experience in designing and implementing data integration solutions. 
-              My expertise lies in transforming complex, messy data into clean, structured, and actionable information that drives 
-              business decisions.
+              I'm a passionate Data Engineer 5 years of experience in Teradata, Snowflake, SQL, and AWS, specializing in data integration,
+performance tuning, and production support. Skilled in handling complex data from diverse sources with domain
+expertise in healthcare.
             </p>
             <p className="text-text-secondary mb-4">
               Throughout my career, I've worked with a wide range of technologies and platforms, from traditional relational 

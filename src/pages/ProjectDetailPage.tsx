@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { ArrowLeft, Github, ExternalLink, CheckCircle } from 'lucide-react';
+import { ArrowLeft, Github, ExternalLink, CheckCircle, ArrowRight } from 'lucide-react';
 import { projectsData, Project } from '../data/projects';
 
 const ProjectDetailPage: React.FC = () => {
@@ -15,11 +15,11 @@ const ProjectDetailPage: React.FC = () => {
     
     // Update page title if project exists
     if (foundProject) {
-      document.title = `${foundProject.title} | ETL Engineer Portfolio`;
+      document.title = `${foundProject.title} | Data Engineer Portfolio`;
     }
     
     return () => {
-      document.title = "ETL Engineer Portfolio";
+      document.title = "Data Engineer Portfolio";
     };
   }, [id]);
   

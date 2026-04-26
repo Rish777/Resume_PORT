@@ -52,7 +52,7 @@ const Navbar: React.FC = () => {
         <NavLink to="/" className="flex items-center space-x-2">
           <Database size={28} className="text-primary-500" />
           <span className="text-xl font-semibold">
-            <span className="text-primary-500">ETL</span> Engineer
+            <span className="text-primary-500">Data</span> Engineer
           </span>
         </NavLink>
 

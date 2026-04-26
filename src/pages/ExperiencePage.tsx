@@ -30,10 +30,10 @@ interface Certification {
 const experiences: Experience[] = [
   {
     project:"Project: Health OS (HOS)",
-    title: "Software Engineer | Carelon Global Solutions",
+    title: "Sr. Software Engineer | Carelon Global Solutions",
     // company: "Carelon Global Solutions",
     location: "Hyderabad, India",
-    period: "2020 - Present",
+    period: "2024 - Present",
     description: [
       "Lead a team of 3 data engineers in designing and implementing ETL pipelines for enterprise clients",
       "Designed and implemented automated business report generation using AWS Lambda, aligning with key business requirements",
@@ -50,7 +50,7 @@ const experiences: Experience[] = [
     title: "Software Engineer | Carelon Global Solutions",
     // company: "FinTech Innovations",
     location: "Hyderabad, India",
-    period: "2020 - Present",
+    period: "2022 - 2024",
     description: [
       "Led data migration from on-premises systems (Teradata, BTEQ, Informatica) to cloud infrastructure (Snowflake, SnowSQL, AWS), ensuring zero data loss.",
       "Utilized the internal AEDL portal (powered by AWS RDS) to securely transfer on-premises tables to Snowflake.",
@@ -67,7 +67,7 @@ const experiences: Experience[] = [
     title: "Associate Software Engineer | Carelon Global Solutions",
     // company: "FinTech Innovations",
     location: "Hyderabad, India",
-    period: "2020 - Present",
+    period: "2020 - 2022",
     description: [
       "Analyzed technical specifications and translated business requirements into efficient data processing solutions.",
       "Developed and optimized BTEQ scripts leveraging Teradata for complex data transformations.",
